@@ -1,0 +1,12 @@
+# one space after BJ:
+BJ: # ":" denotes a mapping value
+# "-" denotes a block sequence entry
+- SUV: BJ40
+- SUV: 
+   int: 212 # int
+   str: "212" # str
+   new: BJ70
+
+# “,” ends a flow collection entry
+# “[” starts a flow sequence
+H: [ H6, H8 ]
