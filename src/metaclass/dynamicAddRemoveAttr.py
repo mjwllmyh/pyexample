@@ -24,11 +24,13 @@ class DynamicMethod(type):
             bases : base classes
             dct : __dict__ 
         """
+        print('new')
         if name[:3] == 'Abc':
             dct.update(method_dict)
         return type.__new__(cls, name, bases, dct)
 
     def __init__(cls, name, bases, dct):
+        print('init')
         super(DynamicMethod, cls).__init__(name, bases, dct)
 
 
@@ -47,7 +49,7 @@ def main():
     a.mc(3)
     a.ma()
     print dir(a)
-
+ 
     b = NotAbc()
     print dir(b)
 
